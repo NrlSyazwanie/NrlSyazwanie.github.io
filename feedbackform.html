@@ -76,7 +76,7 @@ html, body {
       }
       .question {
       padding: 15px 0 5px;
-      color: #095484;
+      color: #fc1b79;
       }
       .question-answer label {
       display: block;
@@ -96,13 +96,13 @@ html, body {
       -webkit-border-radius: 5px; 
       -moz-border-radius: 5px; 
       border-radius: 5px; 
-      background-color: #095484;
+      background-color: #fc1b79;
       font-size: 16px;
       color: #fff;
       cursor: pointer;
       }
       button:hover {
-      background-color: #0666a3;
+      background-color: pink;
       }
       @media (min-width: 568px) {
       th, td {
@@ -111,8 +111,100 @@ html, body {
       }
 </style>
 
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="image/lanadelrey.png" style="width:100%;" class="w3-round"><br><br>
+    <h4><b>PORTFOLIO</b></h4>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-home fa-fw w3-margin-right"></i>PORTFOLIO</a> 
+    <a href="cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-user fa-fw w3-margin-right"></i>PROFILE</a> 
+    <a href="feedbackform.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-envelope fa-fw w3-margin-right"></i>FEEDBACK</a>
+    <a href="photo_Gallery.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-image fa-fw w3-margin-right"></i>PHOTO GALLERY</a> 
+    <a href="about_us.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-id-card fa-fw w3-margin-right"></i>SCHEDULE</a> 
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>Feedback Form</b></h1>
+    </div>
+  </header>
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <div class="testbox">
+      <form name="myForm" action="feedbackform.html">
+        <p class="question">1) Is this the first time you have visited the website?</p>
+        <div class="question-answer">
+          <label><input type="radio" value="none" name="visited" /> yes</label>
+          <label><input type="radio" value="none" name="visited" /> no</label>
+        </div>
+        <p class="question">2) What is the PRIMARY reason you came to the site?</p>
+        <textarea rows="5"></textarea>
+        <p class="question">3) Did you find what you needed?</p>
+        <div class="question-answer">
+          <label><input type="radio" value="none" name="needed" /> Yes, all of it</label>
+          <label><input type="radio" value="none" name="needed" /> Yes, some of it</label>
+          <label><input type="radio" value="none" name="needed" /> No, none of it</label>
+        </div>
+        <p class="question">4) If you did not find any or all of what you needed, please tell me what information you were looking for.</p>
+        <textarea rows="5"></textarea>
+        <p class="question">5) Please tell me how easy it is to find information on the site.</p>
+        <div class="question-answer">
+          <label><input type="radio" value="none" name="easy" /> Very Easy</label>
+          <label><input type="radio" value="none" name="easy" /> Easy</label>
+          <label><input type="radio" value="none" name="easy" /> Average</label>
+          <label><input type="radio" value="none" name="easy" /> Difficult</label>
+          <label><input type="radio" value="none" name="easy" /> Very Difficult</label>
+        </div>
+
+        <p class="question">6) What is the likelihood that you will visit the website again?</p>
+        <div class="question-answer">
+          <label><input type="radio" value="none" name="likelihood" /> Extremely likely</label>
+          <label><input type="radio" value="none" name="likelihood" /> Very likely</label>
+          <label><input type="radio" value="none" name="likelihood" /> Moderately likely</label>
+          <label><input type="radio" value="none" name="likelihood" /> Slightly likely</label>
+          <label><input type="radio" value="none" name="likelihood" /> Not at all likely</label>
+        </div>
+        <p class="question">7) Please add any comments you have for improving the website.</p>
+        <textarea rows="5"></textarea>
+        <div class="btn-block">
+          <button type="submit" href="feedbackform.html" onclick="validateForm()">Send</button>
+        </div>
+      </form>
+    </div>
+  
+<!-- End page content -->
+</div>
+
 <script>
-  function validateForm() {
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+function validateForm() {
     let a = document.forms["myForm"]["visited"].value;
     let b = document.forms["myForm"]["needed"].value;
     let c = document.forms["myForm"]["easy"].value;
@@ -138,143 +230,6 @@ html, body {
       }
   
   }
-  </script>
-  
-<body class="w3-light-grey w3-content" style="max-width:1600px">
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <img src="image/lanadelrey.png" style="width:100%;" class="w3-round"><br><br>
-    <h4><b>PORTFOLIO</b></h4>
-  </div>
-  <div class="w3-bar-block">
-    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-home fa-fw w3-margin-right"></i>PORTFOLIO</a> 
-    <a href="cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>PROFILE</a> 
-    <a href="feedbackform.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>FEEDBACK</a>
-    <a href="photo_Gallery.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-image fa-fw w3-margin-right"></i>PHOTO GALLERY</a> 
-    <a href="about_us.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-id-card fa-fw w3-margin-right"></i>SCHEDULE</a> 
-  </div>
-</nav>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
-
-  <!-- Header -->
-  <header id="portfolio">
-    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
-    <h1><b>Feedback Form</b></h1>
-    </div>
-  </header>
-  <div class="w3-content w3-margin-top" style="max-width:1400px;">
-
-    <div class="testbox">
-      <form name="myForm" action="feedbackform.html">
-        <h1>Website Feedback Form</h1>
-        <p class="question">1) Is this the first time you have visited the website?</p>
-        <div class="question-answer">
-          <label><input type="radio" value="none" name="visited" /> yes</label>
-          <label><input type="radio" value="none" name="visited" /> no</label>
-        </div>
-        <p class="question">2) What is the PRIMARY reason you came to the site?</p>
-        <textarea rows="5"></textarea>
-        <p class="question">3) Did you find what you needed?</p>
-        <div class="question-answer">
-          <label><input type="radio" value="none" name="needed" /> Yes, all of it</label>
-          <label><input type="radio" value="none" name="needed" /> Yes, some of it</label>
-          <label><input type="radio" value="none" name="needed" /> No, none of it</label>
-        </div>
-        <p class="question">4) If you did not find any or all of what you needed, please tell us what information you were looking for.</p>
-        <textarea rows="5"></textarea>
-        <p class="question">5) Please tell us how easy it is to find information on the site.</p>
-        <div class="question-answer">
-          <label><input type="radio" value="none" name="easy" /> Very Easy</label>
-          <label><input type="radio" value="none" name="easy" /> Easy</label>
-          <label><input type="radio" value="none" name="easy" /> Average</label>
-          <label><input type="radio" value="none" name="easy" /> Difficult</label>
-          <label><input type="radio" value="none" name="easy" /> Very Difficult</label>
-        </div>
-
-        <p class="question">6) What is the likelihood that you will visit the website again?</p>
-        <div class="question-answer">
-          <label><input type="radio" value="none" name="likelihood" /> Extremely likely</label>
-          <label><input type="radio" value="none" name="likelihood" /> Very likely</label>
-          <label><input type="radio" value="none" name="likelihood" /> Moderately likely</label>
-          <label><input type="radio" value="none" name="likelihood" /> Slightly likely</label>
-          <label><input type="radio" value="none" name="likelihood" /> Not at all likely</label>
-        </div>
-        <p class="question">7) Please add any comments you have for improving the website. We welcome suggestions on specific areas for improvements, features you would like to see added to the site, and examples of what you consider good websites.</p>
-        <textarea rows="5"></textarea>
-        <div class="btn-block">
-          <button type="submit" href="feedbackform.html" onclick="validateForm()">Send</button>
-        </div>
-      </form>
-    </div>
-  
-    
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-dark-grey">
-  <div class="w3-row-padding">
-    <div class="w3-third">
-      <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-    </div>
-  
-    <div class="w3-third">
-      <h3>BLOG POSTS</h3>
-      <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16">
-          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Lorem</span><br>
-          <span>Sed mattis nunc</span>
-        </li>
-        <li class="w3-padding-16">
-          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Ipsum</span><br>
-          <span>Praes tinci sed</span>
-        </li> 
-      </ul>
-    </div>
-
-    <div class="w3-third">
-      <h3>POPULAR TAGS</h3>
-      <p>
-        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-      </p>
-    </div>
-
-  </div>
-  </footer>
-  
-  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
-
-<!-- End page content -->
-</div>
-
-<script>
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
 </script>
 
 </body>
