@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>My Portfolio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -8,59 +8,47 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.topnav {
-  overflow: hidden;
-  background-color: #ffffff;
-}
-
-.topnav a {
-  float: right;
-  color: #ff0066;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ffe6e6;
-  color: pink;
-}
-
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
 </style>
 <body class="w3-light-grey w3-content" style="max-width:1600px">
 
-<!-- Navbar (sit on top) -->
-<div class="topnav">
-    <a  href="index.html">Home</a>
-    <a href="photo_Gallery.html">Photo Gallery</a>
-    <a href="about_us.html">About Us</a>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="image/lanadelrey.png" style="width:100%;" class="w3-round"><br><br>
+    <h4><b>PORTFOLIO</b></h4>
   </div>
-    
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-home fa-fw w3-margin-right"></i>PORTFOLIO</a> 
+    <a href="cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>PROFILE</a> 
+    <a href="feedbackform.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>FEEDBACK</a>
+    <a href="photo_Gallery.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-image fa-fw w3-margin-right"></i>PHOTO GALLERY</a> 
+    <a href="about_us.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-id-card fa-fw w3-margin-right"></i>SCHEDULE</a> 
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
 
   <!-- Header -->
-  <header id="Gallery">
+  <header id="portfolio">
     <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
     <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
     <div class="w3-container">
-    <h1 align="center"><b>My Photo Gallery</b></h1>
+    <h1><b>My Photo Gallery</b></h1>
+    
     </div>
   </header>
   
   <!-- First Photo Grid-->
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="image/nasi lemak.webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <img src="image/nasi lemak.webp" alt="Nasi Lemak" style="width:350px;height:300px;" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Nasi Lemak</b></p>
         <p style="text-align:justify;">Nasi Lemak is a Malay food dish. It is made from rice cooked with coconut milk, onion, ginger and pandan leaves. Nasi Lemak is also known 
@@ -69,7 +57,7 @@ body {
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="image/asam laksa.webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <img src="image/asam laksa.webp" alt="Asam Laksa" style="width:350px;height:300px;" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Asam Laksa</b></p>
         <p style="text-align:justify;">Asam Laksa is a traditional dish of the Baba and Nyonya community. This dish is rice noodles served with spicy fish gravy. The descendants of Baba and 
@@ -78,7 +66,7 @@ body {
       </div>
     </div>
     <div class="w3-third w3-container">
-      <img src="image/roti-canai2.webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <img src="image/roti-canai2.webp" alt="Roti Canai" style="width:350px;height:300px;" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Roti Canai</b></p>
         <p style="text-align:justify;">Roti Canai is a flat bread introduced by the Indian community. It can be found in most mamak restaurants and Malay restaurants in Malaysia.
@@ -92,7 +80,7 @@ body {
   <!-- Second Photo Grid-->
   <div class="w3-row-padding">
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="image/Rojak.webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <img src="image/Rojak.webp" alt="Rojak" style="width:350px;height:300px;" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Rojak</b></p>
         <p style="text-align:justify;">Rojak is a traditional salad that contains a variety of fruits and vegetables. In Malaysia, there are various types of rojak, namely fruit rojak, Indian rojak, Penang rojak 
@@ -102,7 +90,7 @@ body {
       </div>
     </div>
     <div class="w3-third w3-container w3-margin-bottom">
-      <img src="image/apam-balik.webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <img src="image/apam-balik.webp" alt="Apam Balik" style="width:350px;height:300px;" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Apam Balik</b></p>
         <p style="text-align:justify;">Apam Balik is a type of flat pancake that is cooked using a special mold and can be found anywhere around Malaysia. It is also widely sold by hawkers everywhere.
@@ -111,7 +99,7 @@ body {
       </div>
     </div>
     <div class="w3-third w3-container">
-      <img src="image/mee-kari.webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
+      <img src="image/mee-kari.webp" alt="Mee Kari" style="width:350px;height:300px;" class="w3-hover-opacity">
       <div class="w3-container w3-white">
         <p><b>Mee Kari</b></p>
         <p style="text-align:justify;">Mee Kari is a flavorful and unique dish from a combination of Chinese and Indian dishes. The broth is made from curry spices mixed with coconut milk, chili paste, dried tofu, shrimp, 
@@ -120,41 +108,92 @@ body {
       </div>
     </div>
   </div>
-  
-  <!-- Third Photo Grid-->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="image/sate21.webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Sate</b></p>
-        <p style="text-align:justify;"> Satay is a slice of meat that is marinated, pricked with a skewer and roasted on a charcoal stove. Usually satay is served with peanut gravy and also sliced ​​onion and cucumber. 
-          There are various types of satay in Malaysia, namely meat satay, chicken satay, stomach satay and goat satay. It is a favorite of almost all Malaysians and can be easily found at hawker stalls, night markets and restaurants.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="image/Char-Kuey-Teow-1.webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Char Kuey Teow</b></p>
-        <p style="text-align:justify;">Char Kuew Teow is a very popular food that can be found in Malaysia. Usually it is fried on high heat with liquid soy sauce, thick soy sauce, chilli, shrimp paste, shrimp, mussels, bean sprouts and chives. 
-          In addition, Char Kuew Teow is also fried along with eggs, shrimp, mussels, bean sprouts and more. This dish is also served on banana leaves placed in a plate to further enhance the aroma.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="image/Nasi-Kandar2.webp" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Nasi Kandar</b></p>
-        <p style="text-align:justify;">Nasi kandar is a very popular dish and comes from Penang. It is a white rice dish served with curry sauce and additional side dishes. Usually it is eaten with fried chicken, goat curry, fried squid, fried shrimp, 
-          fried fish, beef and so on. It is also often complemented with vegetables such as fried bitter gourd, fried cabbage, side dishes and so on. Almost all communities are very fond of Nasi Kandar no matter where.</p>
-      </div>
-    </div>
-  </div>
-  
 
+    <!-- third Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="image/sate21.webp" alt="Sate" style="width:350px;height:300px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Sate</b></p>
+          <p style="text-align:justify;"> Satay is a slice of meat that is marinated, pricked with a skewer and roasted on a charcoal stove. Usually satay is served with peanut gravy and also sliced ​​onion and cucumber. 
+            There are various types of satay in Malaysia, namely meat satay, chicken satay, stomach satay and goat satay. It is a favorite of almost all Malaysians and can be easily found at hawker stalls, night markets and restaurants.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src="image/Char-Kuey-Teow-1.webp" alt="Char Kuey Teow" style="width:350px;height:300px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Char Kuey Teow</b></p>
+          <p style="text-align:justify;">Char Kuew Teow is a very popular food that can be found in Malaysia. Usually it is fried on high heat with liquid soy sauce, thick soy sauce, chilli, shrimp paste, shrimp, mussels, bean sprouts and chives. 
+            In addition, Char Kuew Teow is also fried along with eggs, shrimp, mussels, bean sprouts and more. This dish is also served on banana leaves placed in a plate to further enhance the aroma.</p>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <img src="image/Nasi-Kandar2.webp" alt="Nasi Kandar" style="width:350px;height:300px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+          <p><b>Nasi Kandar</b></p>
+          <p style="text-align:justify;">Nasi kandar is a very popular dish and comes from Penang. It is a white rice dish served with curry sauce and additional side dishes. Usually it is eaten with fried chicken, goat curry, fried squid, fried shrimp, 
+            fried fish, beef and so on. It is also often complemented with vegetables such as fried bitter gourd, fried cabbage, side dishes and so on. Almost all communities are very fond of Nasi Kandar no matter where.</p>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-dark-grey">
+  <div class="w3-row-padding">
+    <div class="w3-third">
+      <h3>FOOTER</h3>
+      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
   
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Lorem</span><br>
+          <span>Sed mattis nunc</span>
+        </li>
+        <li class="w3-padding-16">
+          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">Ipsum</span><br>
+          <span>Praes tinci sed</span>
+        </li> 
+      </ul>
+    </div>
+
+    <div class="w3-third">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
+        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
+      </p>
+    </div>
+
+  </div>
+  </footer>
+  
+  <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
 <!-- End page content -->
 </div>
 
-
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 
 </body>
 </html>
