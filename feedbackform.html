@@ -105,14 +105,32 @@
       }
     </style>
     
-!--- baiki sini !---
 <script>
     function validateForm() {
-      let x = document.forms["myForm"]["visited"].value;
-      if (x == "") {
-        alert("Name must be filled out");
+      let a = document.forms["myForm"]["visited"].value;
+      let b = document.forms["myForm"]["needed"].value;
+      let c = document.forms["myForm"]["easy"].value;
+      let d = document.forms["myForm"]["likelihood"].value;
+
+      if (a == "") {
+        alert("1) must be filled out");
         return false;
       }
+      else if (b == "") {
+        alert("3) must be filled out");
+        return false;
+        }
+
+     else if (c == "") {
+        alert("5) must be filled out");
+        return false;
+        }
+
+     else if (d == "") {
+        alert("6) must be filled out");
+        return false;
+        }
+    
     }
     </script>
 
@@ -121,22 +139,22 @@
     <div class="testbox">
       <form name="myForm" action="feedbackform.html">
         <h1>Website Feedback Form</h1>
-        <p class="question">Is this the first time you have visited the website?</p>
+        <p class="question">1) Is this the first time you have visited the website?</p>
         <div class="question-answer">
           <label><input type="radio" value="none" name="visited" /> yes</label>
           <label><input type="radio" value="none" name="visited" /> no</label>
         </div>
-        <p class="question">What is the PRIMARY reason you came to the site?</p>
+        <p class="question">2) What is the PRIMARY reason you came to the site?</p>
         <textarea rows="5"></textarea>
-        <p class="question">Did you find what you needed?</p>
+        <p class="question">3) Did you find what you needed?</p>
         <div class="question-answer">
           <label><input type="radio" value="none" name="needed" /> Yes, all of it</label>
           <label><input type="radio" value="none" name="needed" /> Yes, some of it</label>
           <label><input type="radio" value="none" name="needed" /> No, none of it</label>
         </div>
-        <p class="question">If you did not find any or all of what you needed, please tell us what information you were looking for.</p>
+        <p class="question">4) If you did not find any or all of what you needed, please tell us what information you were looking for.</p>
         <textarea rows="5"></textarea>
-        <p class="question">Please tell us how easy it is to find information on the site.</p>
+        <p class="question">5) Please tell us how easy it is to find information on the site.</p>
         <div class="question-answer">
           <label><input type="radio" value="none" name="easy" /> Very Easy</label>
           <label><input type="radio" value="none" name="easy" /> Easy</label>
@@ -144,42 +162,16 @@
           <label><input type="radio" value="none" name="easy" /> Difficult</label>
           <label><input type="radio" value="none" name="easy" /> Very Difficult</label>
         </div>
-        <p class="question">What is your overall impression of the site?</p>
-        <table>
-          <tr>
-            <th class="first-col"></th>
-            <th>Below Expectations</th>
-            <th>Meets Expectations</th>
-            <th>Exceeds Expectations</th>
-          </tr>
-          <tr>
-            <td class="first-col">Professional</td>
-            <td><input type="radio" value="none" name="professional" /></td>
-            <td><input type="radio" value="none" name="professional" /></td>
-            <td><input type="radio" value="none" name="professional" /></td>
-          </tr>
-          <tr>
-            <td class="first-col">Informative</td>
-            <td><input type="radio" value="none" name="Informative" /></td>
-            <td><input type="radio" value="none" name="Informative" /></td>
-            <td><input type="radio" value="none" name="Informative" /></td>
-          </tr>
-          <tr>
-            <td class="first-col">Visually Pleasing</td>
-            <td><input type="radio" value="none" name="Visually" /></td>
-            <td><input type="radio" value="none" name="Visually" /></td>
-            <td><input type="radio" value="none" name="Visually" /></td>
-          </tr>
-        </table>
-        <p class="question">What is the likelihood that you will visit the website again?</p>
+
+        <p class="question">6) What is the likelihood that you will visit the website again?</p>
         <div class="question-answer">
           <label><input type="radio" value="none" name="likelihood" /> Extremely likely</label>
           <label><input type="radio" value="none" name="likelihood" /> Very likely</label>
           <label><input type="radio" value="none" name="likelihood" /> Moderately likely</label>
-          <label><input type="radio" value="none" name="likelihood" /> aSlightly likely</label>
+          <label><input type="radio" value="none" name="likelihood" /> Slightly likely</label>
           <label><input type="radio" value="none" name="likelihood" /> Not at all likely</label>
         </div>
-        <p class="question">Please add any comments you have for improving the website. We welcome suggestions on specific areas for improvements, features you would like to see added to the site, and examples of what you consider good websites.</p>
+        <p class="question">7) Please add any comments you have for improving the website. We welcome suggestions on specific areas for improvements, features you would like to see added to the site, and examples of what you consider good websites.</p>
         <textarea rows="5"></textarea>
         <div class="btn-block">
           <button type="submit" href="feedbackform.html" onclick="validateForm()">Send</button>
