@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {
+  font-family: "Raleway", sans-serif
+  color = white;
+}
+
+</style>
+
+
+
+<body class="w3-light-grey w3-content" background="image/3.jpeg" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="image/lanadelrey.png" style="width:100%;" class="w3-round"><br><br>
+    <h4><b>PORTFOLIO</b></h4>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-home fa-fw w3-margin-right"></i>PORTFOLIO</a> 
+    <a href="cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-user fa-fw w3-margin-right"></i>PROFILE</a> 
+    <a href="feedbackform.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-envelope fa-fw w3-margin-right"></i>FEEDBACK</a>
+    <a href="photo_Gallery.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-image fa-fw w3-margin-right"></i>PHOTO GALLERY</a> 
+    <a href="about_us.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-id-card fa-fw w3-margin-right"></i>SCHEDULE</a> 
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>My Portfolio</b></h1>
+
+    
+    </div>
+  </header>
+ 
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px" >
+    
+    <h4><b>About Me</b></h4>
+    <p style="color:white;">I'm a student from MARA University of Technology in Bachelor of Computer Science. my goals is to achieve vice chancellor award on my graduation and grad on time. </p>
+    </video>
+    <hr>
+    
+  </div>
+
+  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+    <h4><b>My Video</b></h4>
+
+    <div style="text-align:center"> 
+      <button onclick="playPause()">Play/Pause</button> 
+      <button onclick="makeBig()">Big</button>
+      <button onclick="makeSmall()">Small</button>
+      <button onclick="makeNormal()">Normal</button>
+      <br><br>
+      <video id="video1" width="420">
+        <source src="image/video.mp4" type="video/mp4">
+        <source src="image/video.ogg" type="video/ogg">
+        Your browser does not support HTML video.
+      </video>
+    </div> 
+    <hr>
+    
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+  var myVideo = document.getElementById("video1"); 
+  
+  function playPause() { 
+    if (myVideo.paused) 
+      myVideo.play(); 
+    else 
+      myVideo.pause(); 
+  } 
+  
+  function makeBig() { 
+      myVideo.width = 860; 
+  } 
+  
+  function makeSmall() { 
+      myVideo.width = 320; 
+  } 
+  
+  function makeNormal() { 
+      myVideo.width = 420; 
+  } 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<title>Feedback form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+table          {border:ridge 5px pink;}
+
+body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-color: #ffffff;
+        }
+        
+        .topnav a {
+          float: right;
+          color: #ff0066;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .topnav a:hover {
+          background-color: #ffe6e6;
+          color: pink;
+        }
+        
+        .topnav a.active {
+          background-color: #04AA6D;
+          color: white;
+        }
+</style>
+
+<script>
+  function validateForm() {
+    let a = document.forms["myForm"]["visited"].value;
+    let b = document.forms["myForm"]["needed"].value;
+    let c = document.forms["myForm"]["easy"].value;
+    let d = document.forms["myForm"]["likelihood"].value;
+
+    if (a == "") {
+      alert("1) must be filled out");
+      return false;
+    }
+    else if (b == "") {
+      alert("3) must be filled out");
+      return false;
+      }
+
+   else if (c == "") {
+      alert("5) must be filled out");
+      return false;
+      }
+
+   else if (d == "") {
+      alert("6) must be filled out");
+      return false;
+      }
+  
+  }
+  </script>
+  
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="image/lanadelrey.png" style="width:100%;" class="w3-round"><br><br>
+    <h4><b>PORTFOLIO</b></h4>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-home fa-fw w3-margin-right"></i>PORTFOLIO</a> 
+    <a href="cv.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-user fa-fw w3-margin-right"></i>PROFILE</a> 
+    <a href="feedbackform.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-envelope fa-fw w3-margin-right"></i>FEEDBACK</a>
+    <a href="photo_Gallery.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-image fa-fw w3-margin-right"></i>PHOTO GALLERY</a> 
+    <a href="about_us.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-pink"><i class="fa fa-id-card fa-fw w3-margin-right"></i>SCHEDULE</a> 
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Header -->
+  <header id="portfolio">
+    <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
+    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+    <div class="w3-container">
+    <h1><b>About Us</b></h1>
+    </div>
+  </header>
+  <div class="w3-content w3-margin-top" style="max-width:1400px;">
+
+    <h1 align="center">Time Table</h1>
+    <table border="5" cellspacing="0" align="center">
+        <!--<caption>Timetable</caption>-->
+        <tr>
+            <td align="center" height="50" 
+                width="100"><br>
+                <b>Day/Period</b></br>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>8:00am</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>9:50am</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>10:15am</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>12:05pm</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>12:10pm</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>2:05pm</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>2:30pm</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>4:20pm</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>4:30pm</b>
+            </td>
+            <td align="center" height="50" 
+                width="100">
+                <b>6:20pm</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Sunday</b></td>
+            <td colspan="2" align="center" height="50">CSC508 <br> 8:00am - 9:50am</td>
+            <td colspan="2" align="center" height="50">CSC569 <br> 10:15am - 12:05pm</td>
+            <td align="center" height="50">CTU554 <br> 12:15pm - 1:05pm</td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Monday</b>
+            </td>
+            <td colspan="2" align="center" height="50">CSC577 <br> 8:00am - 9:50am</td>
+            <td colspan="2" align="center" height="50">CSC574 <br> 10:15am - 12:05pm</td>
+            <td colspan="2" align="center" height="50">CSC584 <br> 12:15pm - 2:05pm</td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+           
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Tuesday</b>
+            </td>
+            <td colspan="2" align="center" height="50">CSC569 <br> 8:00am - 9:50am</td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td colspan="2" align="center" height="50">ELC650 <br> 12:15pm - 2:05pm</td>
+            <td colspan="2" align="center" height="50">CSC508 <br> 2:30pm - 4:20pm</td>
+            <td colspan="2" align="center" height="50">CSC574 <br> 4:30pm - 6:20pm</td>
+            
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Wednesday</b>
+            </td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td colspan="2" align="center" height="50">CSC577 <br> 10:15am - 12:05pm</td>
+            <td align="center" height="50">CTU554 <br> 12:15pm - 1:05pm</td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            
+        </tr>
+        <tr>
+            <td align="center" height="50">
+                <b>Thursday</b>
+            </td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td colspan="2" align="center" height="50">TMC451<br> 10:15am - 12:05pm</td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+            <td colspan="2" align="center" height="50">CSC584 <br> 2:30pm - 4:20pm</td>
+            <td align="center" height="50"></td>
+            <td align="center" height="50"></td>
+        </tr>
+    </table>
+
+<!--<expected grade>-->
+    <h1 align="center">My Expected Grades</h1>
+    <table border="3" cellspacing="0" align="center">
+        
+        <tr>
+            <td align="center" height="20" 
+                width="100"><br>
+                <b>No.</b></br>
+            </td>
+            <td align="center" height="20" 
+                width="800">
+                <b>COURSES</b>
+            </td>
+            <td align="center" height="20" 
+                width="100">
+                <b>GRADES</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="20">
+                <b>1.</b></td>
+            <td align="left" height="20">CSC508 - DATA STRUCTURES</td>
+            <td align="center" height="20">B+</td>
+        </tr>
+        <tr>
+            <td align="center" height="20">
+                <b>2.</b></td>
+            <td align="left" height="20">CSC569 - PRINCIPLES OF COMPILERS</td>
+            <td align="center" height="20">A</td>
+           
+        </tr>
+        <tr>
+            <td align="center" height="20">
+                <b>3.</b></td>
+            <td align="left" height="20">CSC574 - DYNAMIC WEB APPLICATION DEVELOPMENT</td>
+            <td align="center" height="20">A</td>
+            
+        </tr>
+        <tr>
+            <td align="center" height="20">
+                <b>4.</b></td>
+            <td align="left" height="20">CSC577 - SOFTWARE ENGINEERING - THEORIES AND PRINCIPLES</td>
+            <td align="center" height="20">A-</td>
+        </tr>
+        <tr>
+            <td align="center" height="20">
+                <b>5.</b></td>
+            <td align="left" height="20">CSC584 - ENTERPRISE PROGRAMMING</td>
+            <td align="center" height="20">B+</td>
+        </tr>
+        <tr>
+            <td align="center" height="20">
+                <b>6.</b></td>
+            <td align="left" height="20">CTU554 - VALUES AND CIVILIZATION II</td>
+            <td align="center" height="20">A-</td>
+        </tr>
+        <tr>
+            <td align="center" height="20">
+                <b>7.</b></td>
+            <td align="left" height="20">ELC650 - ENGLISH FOR PROFESSIONAL INTERACTION</td>
+            <td align="center" height="20">A</td>
+        </tr>
+        <tr>
+            <td align="center" height="20">
+                <b>8.</b></td>
+            <td align="left" height="20">TMC451 - INTRODUCTORY TO MANDARIN (LEVEL II)</td>
+            <td align="center" height="20">A+</td>
+        </tr>
+    </table><br>
+  
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
